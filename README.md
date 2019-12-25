@@ -762,7 +762,7 @@ You need to add following entry to your `config.xml` file:
 ```xml
 <widget>
     <universal-links>
-        <host name="[hash].adj.st" scheme="https" event="adtraceDeepLinking" />
+        <host name="[hash].adt.st" scheme="https" event="adtraceDeepLinking" />
     </universal-links>
 </widget>
 ```
