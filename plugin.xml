@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="io.adtrace.sdk"
+    version="0.0.3">
+
+    <name>AdTrace</name>
+    <description>AdTrace plugin for Cordova</description>
+    <license>MIT License</license>
+    <keywords>adtrace</keywords>
+    <author>adtrace</author>
+
+    <engines>
+        <engine name="cordova-android" version=">=4.0.0" />
+        <engine name="cordova-ios" version=">=3.0.0" />
+    </engines>
+
+    <js-module src="www/adtrace.js" name="AdTrace">
+        <clobbers target="AdTrace" />
+    </js-module>
+    <js-module src="www/adtrace_config.js" name="AdTraceConfig">
+        <clobbers target="AdTraceConfig" />
+    </js-module>
+    <js-module src="www/adtrace_event.js" name="AdTraceEvent">
+        <clobbers target="AdTraceEvent" />
+    </js-module>
+
+    <!-- Android -->
+    <platform name="android">
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <receiver
+                android:name="io.adtrace.sdk.AdTraceReferrerReceiver"
+                android:permission="android.permission.INSTALL_PACKAGES"
+                android:exported="true">
+                <intent-filter>
+                    <action android:name="io.android.vending.INSTALL_REFERRER" />
+                </intent-filter>
+            </receiver>
+        </config-file>
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="AdTrace">
+                <param name="android-package" value="io.adtrace.sdk.AdTraceCordova"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/AdTraceCordova.java" target-dir="src/io/adtrace/sdk" />
+        <source-file src="src/android/AdTraceCordovaUtils.java" target-dir="src/io/adtrace/sdk" />
+        <source-file src="src/android/adtrace-android.jar" target-dir="libs" />
+
+        <framework src="com.google.android.gms:play-services-analytics:+" />
+        <framework src="com.android.installreferrer:installreferrer:1.0" />
+    </platform>
+
+    <!-- iOS -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="AdTrace">
+                <param name="ios-package" value="AdTraceCordova"/>
+                <param name="onload" value="true" />
+          </feature>
+        </config-file>
+
+        <header-file src="src/ios/AdTraceCordova.h" />
+        <source-file src="src/ios/AdTraceCordova.m" />
+        <header-file src="src/ios/AdTraceCordovaDelegate.h" />
+        <source-file src="src/ios/AdTraceCordovaDelegate.m" />
+
+        <framework src="src/ios/AdTraceSdk.framework" custom="true" />
+        <framework src="AdSupport.framework" weak="true" />
+        <framework src="iAd.framework" weak="true" />
+        <framework src="CoreTelephony.framework" weak="true" />
+    </platform>
+</plugin>

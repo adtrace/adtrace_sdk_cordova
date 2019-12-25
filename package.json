@@ -1,0 +1,30 @@
+{
+    "version": "0.0.3",
+    "name": "io.adtrace.sdk",
+    "cordova_name": "Adtrace SDK Cordova Plugin",
+    "description": "Cordova plugin for the Adtrace SDK 0.0.3",
+    "license": "MIT License",
+    "platforms": [
+        "ios",
+        "android"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.0.0"
+        },
+        {
+            "name": "cordova-ios",
+            "version": ">=3.0.0"
+        },
+        {
+            "name": "cordova-android",
+            "version": ">=4.0.0"
+        }
+    ],
+    "keywords": [
+        "adtrace",
+        "sdk",
+        "ecosystem:cordova"
+    ]
+}

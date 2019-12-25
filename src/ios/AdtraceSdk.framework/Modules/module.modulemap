@@ -1,0 +1,6 @@
+framework module AdTraceSdk {
+  umbrella header "AdTrace.h"
+
+  export *
+  module * { export * }
+}
