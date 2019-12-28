@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="io.adtrace.sdk"
-    version="0.0.3">
+    version="0.0.4">
 
     <name>AdTrace</name>
     <description>AdTrace plugin for Cordova</description>

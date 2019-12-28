@@ -1,8 +1,8 @@
 {
-    "version": "0.0.3",
+    "version": "0.0.4",
     "name": "io.adtrace.sdk",
     "cordova_name": "Adtrace SDK Cordova Plugin",
-    "description": "Cordova plugin for the Adtrace SDK 0.0.3",
+    "description": "Cordova plugin for the Adtrace SDK 0.0.4",
     "license": "MIT License",
     "platforms": [
         "ios",

@@ -2,7 +2,7 @@
 
 This is the Cordova SDK of AdTrace. You can read more about AdTrace™ at [adtrace.io].
 
-N.B. At the moment, SDK 0.0.3 for Cordova supports Android platform version `4.0.0 and higher` and iOS platform version `3.0.0 and higher`.
+N.B. At the moment, SDK 0.0.4 for Cordova supports Android platform version `4.0.0 and higher` and iOS platform version `3.0.0 and higher`.
 
 ## Table of contents
 

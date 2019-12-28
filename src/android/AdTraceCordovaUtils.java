@@ -23,6 +23,7 @@ public class AdTraceCordovaUtils {
     public static final String KEY_PARTNER_PARAMETERS = "partnerParameters";
     public static final String KEY_SEND_IN_BACKGROUND = "sendInBackground";
     public static final String KEY_SHOULD_LAUNCH_DEEPLINK = "shouldLaunchDeeplink";
+    public static final String KEY_ENABLE_INSTALLED_APPS = "enableInstalledApps";
     public static final String KEY_USER_AGENT = "userAgent";
     public static final String KEY_DELAY_START = "delayStart";
     public static final String KEY_SECRET_ID = "secretId";

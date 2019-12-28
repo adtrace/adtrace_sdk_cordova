@@ -126,7 +126,7 @@ var AdTrace = {
     },
 
     getSdkPrefix: function () {
-        return 'cordova0.0.3';
+        return 'cordova0.0.4';
     },
 
     addSessionCallbackParameter: function(key, value) {

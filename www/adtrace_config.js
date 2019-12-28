@@ -9,6 +9,7 @@ function AdTraceConfig(appToken, environment) {
     this.defaultTracker = null;
     this.sendInBackground = null;
     this.shouldLaunchDeeplink = null;
+    this.enableInstalledApps = null;
     this.eventBufferingEnabled = null;
     this.attributionCallback = null;
     this.eventTrackingSucceededCallback = null;
@@ -55,6 +56,10 @@ AdTraceConfig.prototype.getSendInBackground = function() {
 
 AdTraceConfig.prototype.getShouldLaunchDeeplink = function() {
     return this.shouldLaunchDeeplink;
+};
+
+AdTraceConfig.prototype.getEnableInstalledApps = function() {
+    return this.enableInstalledApps;
 };
 
 AdTraceConfig.prototype.getAttributionCallback = function() {
@@ -146,6 +151,10 @@ AdTraceConfig.prototype.setSendInBackground = function(sendInBackground) {
 
 AdTraceConfig.prototype.setShouldLaunchDeeplink = function(shouldLaunchDeeplink) {
     this.shouldLaunchDeeplink = shouldLaunchDeeplink;
+};
+
+AdTraceConfig.prototype.setEnableInstalledApps = function(enableInstalledApps) {
+    this.enableInstalledApps = enableInstalledApps;
 };
 
 // @deprecated

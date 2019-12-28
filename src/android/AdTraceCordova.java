@@ -192,6 +192,7 @@ public class AdTraceCordova extends CordovaPlugin implements OnAttributionChange
         boolean isDeviceKnown = false;
         boolean sendInBackground = false;
         boolean shouldLaunchDeeplink = false;
+        boolean enableInstalledApps = false;
 
         if (parameters.containsKey(KEY_APP_TOKEN)) {
             appToken = parameters.get(KEY_APP_TOKEN).toString();
@@ -243,6 +244,9 @@ public class AdTraceCordova extends CordovaPlugin implements OnAttributionChange
         }
         if (parameters.containsKey(KEY_SHOULD_LAUNCH_DEEPLINK)) {
             shouldLaunchDeeplink = parameters.get(KEY_SHOULD_LAUNCH_DEEPLINK).toString() == "true" ? true : false;
+        }
+        if (parameters.containsKey(KEY_ENABLE_INSTALLED_APPS)) {
+            enableInstalledApps = parameters.get(KEY_ENABLE_INSTALLED_APPS).toString() == "true" ? true : false;
         }
 
         if (isFieldValid(logLevel) && logLevel.equals("SUPPRESS")) {
@@ -315,6 +319,9 @@ public class AdTraceCordova extends CordovaPlugin implements OnAttributionChange
 
         // Background tracking.
         adtraceConfig.setSendInBackground(sendInBackground);
+
+        // Send installed apps.
+        adtraceConfig.enableSendInstalledApps(enableInstalledApps);
 
         // Launching deferred deep link.
         this.shouldLaunchDeeplink = shouldLaunchDeeplink;
