@@ -59,7 +59,7 @@ N.B. At the moment, SDK 0.0.4 for Cordova supports Android platform version `4.0
 
 ## <a id="example-app"></a>Example app
 
-There is Cordova example app inside the [`example-cordova` directory][example-cordova] and Ionic example app inside the [`example-ionic` directory][example-ionic]. In there you can check how to integrate the AdTrace SDK into your app.
+There is Cordova example app inside the [`example-cordova` directory][example-cordova] . In there you can check how to integrate the AdTrace SDK into your app.
 
 ## <a id="basic-integration"></a>Basic integration
 
@@ -95,13 +95,6 @@ cordova plugin add cordova.plugins.diagnostic
 cordova plugin add cordova-plugin-androidx
 cordova plugin add cordova-plugin-androidx-adapter
 cordova build android
-```
-
-In case you are using Ionic Native, you can add our SDK from `ionic-native` repo:
-
-```
-> npm install @ionic-native/adtrace --save
-> ionic cordova plugin add io.adtrace.sdk
 ```
 
 ### <a id="sdk-integrate"></a>Integrate the SDK into your app
@@ -904,7 +897,6 @@ var app = {
 
 [releases]:         https://github.com/adtrace/cordova_sdk/releases
 [npm-repo]:         https://www.npmjs.com/package/io.adtrace.sdk
-[example-ionic]:    ./example-ionic
 [example-cordova]:  ./example-cordova
 
 [google-ad-id]:         https://developer.android.com/google/play-services/id.html
