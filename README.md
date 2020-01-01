@@ -895,7 +895,7 @@ var app = {
 [dashboard]:    http://adtrace.io
 [adtrace.io]:   http://adtrace.io
 
-[releases]:         https://github.com/adtrace/cordova_sdk/releases
+[releases]:         https://github.com/adtrace/adtrace_sdk_cordova/releases
 [npm-repo]:         https://www.npmjs.com/package/io.adtrace.sdk
 [example-cordova]:  ./example-cordova
 
