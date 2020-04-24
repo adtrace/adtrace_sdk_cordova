@@ -381,6 +381,7 @@ public class AdTraceCordova extends CordovaPlugin implements OnAttributionChange
         String revenue = null;
         String currency = null;
         String callbackId = null;
+        String eventValue = null;
 
         if (parameters.containsKey(KEY_EVENT_TOKEN)) {
             eventToken = parameters.get(KEY_EVENT_TOKEN).toString();
@@ -393,6 +394,9 @@ public class AdTraceCordova extends CordovaPlugin implements OnAttributionChange
         }
         if (parameters.containsKey(KEY_CALLBACK_ID)) {
             callbackId = parameters.get(KEY_CALLBACK_ID).toString();
+        }
+        if (parameters.containsKey(KEY_EVENT_VALUE)) {
+            eventValue = parameters.get(KEY_EVENT_VALUE).toString();
         }
 
         JSONArray partnerParametersJson = (JSONArray)parameters.get(KEY_PARTNER_PARAMETERS);
@@ -433,6 +437,11 @@ public class AdTraceCordova extends CordovaPlugin implements OnAttributionChange
         // Callback ID.
         if (isFieldValid(callbackId)) {
             adtraceEvent.setCallbackId(callbackId);
+        }
+
+        // Event value.
+        if (isFieldValid(eventValue)) {
+            adtraceEvent.setEventValue(eventValue);
         }
 
         // Track event.
