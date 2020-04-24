@@ -3,6 +3,7 @@ function AdTraceEvent(eventToken) {
     this.revenue = null;
     this.currency = null;
     this.callbackId = null;
+    this.eventValue = null;
     this.callbackParameters = [];
     this.partnerParameters = [];
     // iOS only
@@ -28,5 +29,10 @@ AdTraceEvent.prototype.addPartnerParameter = function(key, value) {
 AdTraceEvent.prototype.setCallbackId = function(callbackId) {
     this.callbackId = callbackId;
 }
+
+AdTraceEvent.prototype.setEventValue = function(eventValue) {
+    this.eventValue = eventValue;
+}
+
 
 module.exports = AdTraceEvent;
