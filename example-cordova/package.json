@@ -13,12 +13,12 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "dependencies": {
+    "cordova-adtrace": "0.0.6",
     "cordova-android": "^8.1.0",
     "cordova-ios": "^5.1.1",
     "cordova-plugin-androidx": "^1.0.2",
     "cordova-plugin-androidx-adapter": "^1.1.0",
-    "cordova.plugins.diagnostic": "^5.0.1",
-    "io.adtrace.sdk": "0.0.4"
+    "cordova.plugins.diagnostic": "^5.0.1"
   },
   "devDependencies": {
     "cordova-plugin-whitelist": "^1.3.4"
@@ -31,7 +31,7 @@
       },
       "cordova-plugin-androidx": {},
       "cordova-plugin-androidx-adapter": {},
-      "io.adtrace.sdk": {}
+      "cordova-adtrace": {}
     },
     "platforms": [
       "android",

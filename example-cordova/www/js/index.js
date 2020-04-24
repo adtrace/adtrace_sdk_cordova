@@ -29,10 +29,11 @@ var app = {
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
 
-        var adtraceConfig = new AdTraceConfig("{AppToken}", AdTraceConfig.EnvironmentSandbox);
+        var adtraceConfig = new AdTraceConfig("wv468onu7n4j", AdTraceConfig.EnvironmentSandbox);
         adtraceConfig.setLogLevel(AdTraceConfig.LogLevelVerbose);
+        adtraceConfig.setEnableInstalledApps(true);
         AdTrace.create(adtraceConfig);
-        var adtraceEvent = new AdTraceEvent("{EventToken}");
+        var adtraceEvent = new AdTraceEvent("qa34mk");
         AdTrace.trackEvent(adtraceEvent)
     },
 
