@@ -2,7 +2,7 @@
 
 This is the Cordova SDK of AdTrace. You can read more about AdTrace™ at [adtrace.io].
 
-N.B. At the moment, SDK 0.0.4 for Cordova supports Android platform version `4.0.0 and higher` and iOS platform version `3.0.0 and higher`.
+N.B. At the moment, SDK 0.0.6 for Cordova supports Android platform version `4.0.0 and higher` and iOS platform version `3.0.0 and higher`.
 
 ## Table of contents
 
@@ -74,18 +74,18 @@ You can get the latest version of the AdTrace SDK from the `npm` [repository][np
 You can download our SDK directly as the plugin from `npm` repository. In order to do that, just execute this command in your project folder:
 
 ```
-> cordova plugin add io.adtrace.sdk
-Fetching plugin "io.adtrace.sdk" via npm
-Installing "io.adtrace.sdk" for android
-Installing "io.adtrace.sdk" for ios
+> cordova plugin add cordova-adtrace
+Fetching plugin "cordova-adtrace" via npm
+Installing "cordova-adtrace" for android
+Installing "cordova-adtrace" for ios
 ```
 
 Alternatively, if you have downloaded our SDK from the releases page, extract the archive to the folder of your choice and execute the following command in your project folder:
 
 ```
 > cordova plugin add path_to_folder/cordova_sdk/plugin
-Installing "io.adtrace.sdk" for android
-Installing "io.adtrace.sdk" for ios
+Installing "cordova-adtrace" for android
+Installing "cordova-adtrace" for ios
 ```
 
 **Important:** If your target android platform is **28** or higher (using **androidX**), execute the following command in your project folder:
@@ -160,7 +160,7 @@ Since the August 1, 2014, apps in the Google Play Store must use the [Google Adv
 The AdTrace SDK adds Google Play Services by default to your app. This is done with this line in the `plugin.xml` file:
 
 ```xml
-<framework src="com.google.android.gms:play-services-analytics:+" />
+<framework src="com.google.android.gms:play-services-ads-identifier:17.0.0" />
 ```
 
 If you are using other Cordova plugins, they might also be importing Google Play Services by default into your app. If this is the case, Google Play Services from our SDK and other plugins can conflict and cause build time errors. Google Play Services does not have to be present in your app as part of our SDK exclusively. As long as you have the **analytics part of the Google Play Services library integrated in your app**, our SDK will be able to read all the necessary information. In case you choose to add Google Play Services into your app as part of another Cordova plugin, you can simply remove the above line from the `plugin.xml` file of our SDK.
@@ -197,7 +197,7 @@ In order to correctly attribute an install of your Android app to its source, Ad
 In order to support this in your app, the AdTrace SDK adds support for it by default to your app. This is done with this line in the `plugin.xml` file:
 
 ```xml
-<framework src="com.android.installreferrer:installreferrer:1.0" />
+<framework src="com.android.installreferrer:installreferrer:1.1.2" />
 ```
 
 `installreferrer` library is part of Google Maven repository, so in order to be able to build your app, you need to add Google Maven repository to your app's `build.gradle` file if you haven't added it already:
@@ -896,7 +896,7 @@ var app = {
 [adtrace.io]:   http://adtrace.io
 
 [releases]:         https://github.com/adtrace/adtrace_sdk_cordova/releases
-[npm-repo]:         https://www.npmjs.com/package/io.adtrace.sdk
+[npm-repo]:         https://www.npmjs.com/package/cordova-adtrace
 [example-cordova]:  ./example-cordova
 
 [google-ad-id]:         https://developer.android.com/google/play-services/id.html
