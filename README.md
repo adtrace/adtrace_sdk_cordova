@@ -187,9 +187,7 @@ In order to support this in your app, the AdTrace SDK adds support for it by def
 allprojects {
     repositories {
         jcenter()
-        maven {
-            url "https://maven.google.com"
-        }
+        google()
     }
 }
 ```
