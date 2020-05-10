@@ -741,6 +741,7 @@ To increase the accuracy and security in fraud detection, you can enable the sen
 adtraceConfig.setEnableSendInstalledApps(true);
 ```
 
+**Note**: This option is  **disabled**  by default.
 
 ### <a id="af-di"></a>Device IDs
 
