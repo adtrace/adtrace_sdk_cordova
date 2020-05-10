@@ -181,19 +181,6 @@ In order to support this in your app, the AdTrace SDK adds support for it by def
 <framework src="com.android.installreferrer:installreferrer:1.1.2" />
 ```
 
-`installreferrer` library is part of Google Maven repository, so in order to be able to build your app, you need to add Google Maven repository to your app's `build.gradle` file if you haven't added it already:
-
-```gradle
-allprojects {
-    repositories {
-        jcenter()
-        maven {
-            url "https://maven.google.com"
-        }
-    }
-}
-```
-
 Also, make sure that you have paid attention to the [Proguard settings](#android-proguard) chapter and that you have added all the rules mentioned in it, especially the one needed for this feature:
 
 ```
@@ -319,8 +306,6 @@ By completing integration of this plugin, you should be able to handle deep link
 ### <a id="dl-ios-new"></a>Deep linking on iOS 9 and later
 
 Starting from **iOS 9**, Apple has introduced suppressed support for old style deep linking with custom URL schemes like described above in favour of `universal links`. If you want to support deep linking in your app for iOS 9 and higher, you need to add support for universal links handling.
-
-First thing you need to do is to enable universal links for your app in the AdTrace panel. Instructions on how to do that can be found in our native iOS SDK [README][enable-ulinks].
 
 After you have enabled universal links handling for your app in your panel, you need to add support for it in your app as well. You can achieve this by adding this [plugin][plugin-ulinks] to your cordova app. Please, read the README of this plugin, because it precisely describes what should be done in order to properly integrate it.
 
@@ -756,6 +741,7 @@ To increase the accuracy and security in fraud detection, you can enable the sen
 adtraceConfig.setEnableSendInstalledApps(true);
 ```
 
+**Note**: This option is  **disabled**  by default.
 
 ### <a id="af-di"></a>Device IDs
 
@@ -896,7 +882,6 @@ Upon receiving this information, AdTrace will erase the user's data and the AdTr
 [example-cordova]:  ./example-cordova
 
 [google-ad-id]:         https://developer.android.com/google/play-services/id.html
-[enable-ulinks]:        https://github.com/adtrace/adtrace_sd_ios#deeplinking-setup-new
 [plugin-ulinks]:        https://github.com/nordnet/cordova-universal-links-plugin
 [custom-url-scheme]:    https://github.com/EddyVerbruggen/Custom-URL-scheme
 [broadcast-receiver]:   https://github.com/adtrace/adtrace_sdk_android#gps-intent
