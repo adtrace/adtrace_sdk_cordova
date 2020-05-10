@@ -307,8 +307,6 @@ By completing integration of this plugin, you should be able to handle deep link
 
 Starting from **iOS 9**, Apple has introduced suppressed support for old style deep linking with custom URL schemes like described above in favour of `universal links`. If you want to support deep linking in your app for iOS 9 and higher, you need to add support for universal links handling.
 
-First thing you need to do is to enable universal links for your app in the AdTrace panel. Instructions on how to do that can be found in our native iOS SDK [README][enable-ulinks].
-
 After you have enabled universal links handling for your app in your panel, you need to add support for it in your app as well. You can achieve this by adding this [plugin][plugin-ulinks] to your cordova app. Please, read the README of this plugin, because it precisely describes what should be done in order to properly integrate it.
 
 **Note**: You can disregard any information in the README that states that you need to have a domain and website or you need to upload a file to the root of your domain. AdTrace is taking care of this instead of you and you can skip these parts of the README. Also, you don't need to follow the instructions of this plugin for the Android platform, because deep linking in Android is still being handled with `Custom URL scheme` plugin.
@@ -883,7 +881,6 @@ Upon receiving this information, AdTrace will erase the user's data and the AdTr
 [example-cordova]:  ./example-cordova
 
 [google-ad-id]:         https://developer.android.com/google/play-services/id.html
-[enable-ulinks]:        https://github.com/adtrace/adtrace_sd_ios#deeplinking-setup-new
 [plugin-ulinks]:        https://github.com/nordnet/cordova-universal-links-plugin
 [custom-url-scheme]:    https://github.com/EddyVerbruggen/Custom-URL-scheme
 [broadcast-receiver]:   https://github.com/adtrace/adtrace_sdk_android#gps-intent
